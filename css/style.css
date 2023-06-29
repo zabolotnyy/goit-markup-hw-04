@@ -279,7 +279,11 @@ button {
 /*Team Fnish*/
 /*Customers*/
 .customers-container {
-padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
 }
 /*main-section*/
 .main-section {
@@ -324,15 +328,33 @@ padding: 120px;
 .porfolio-images .portfolio-image-name:hover,
 .porfolio-images .portfolio-image-name:focus {
     background:  #FFF;
-box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-animation-fill-mode: ;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    animation-fill-mode: ;
 }
-.portfolio-image-name {
+.hidden-text {
     display: flex;
     padding: 0;
     margin-bottom: 48px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
     }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+    padding: 8px;
+    background-color: #3f51b5;
+    color: #fff;
+    font-family: sans-serif;
+}
+.hidden-text:hover .overlay {
+    transform: translateY(0);
+}
 .portfolio-image-text {
     display: flex;
     flex-direction: column;
@@ -340,6 +362,16 @@ animation-fill-mode: ;
     margin-bottom: 8px;
     border: 1px solid #e7e9fc;
     border-top: none;
+}
+.overlay-text {
+    display:block;
+    padding: 40px 32px 164px 32px;;
+    font-size: 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
 }
 /*Footer*/
 .footer {
@@ -379,29 +411,69 @@ animation-fill-mode: ;
     border-radius: 4px;
     background: #F4F4FD;
     }
-.networks {
-    background-color:var(--web-button-color);
-    fill: var(--footer);
+.staff-networks-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 232px;
+}
+.list-net {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--web-button-color);
+    fill: currentColor;
+    width: 40px;
+    height: 40px;
     padding: 12px;
-    }
+    border-radius: 50%;
+}
+.list-net:hover {
+    background-color: var(--focus-color);
+}
 .staff-networks {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     min-width: 232px;
     }
 .list-networks {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--web-button-color);
+    fill: currentColor;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
     border-radius: 50%;
+    }
+.list-networks:hover {
+    background-color: #31D0AA;
 }
+
 .list-customers {
     display: flex;
     justify-content: space-between;
     padding-top: 72px;
+    gap: 24px;
     }
-.customers-images {
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     fill:#8E8F99;
-    border-radius: 4px;
     border: 1px solid #8E8F99;
+    border-radius: 4px;
+    width: 168px;
+    height: 88px;
+}
+.customers-link:hover {
+    border-color:var(--focus-color) ;
+}
+.customers-link:hover .customers-images {
+    fill: var(--focus-color);
+
 }
 .media {
     font-size: 16px;
@@ -418,3 +490,35 @@ animation-fill-mode: ;
     max-width: 692px;
     margin-left: 120px;
 }
+/*MODAL WINDOW
+.window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.box {
+    position: absolute;
+    width: 408px;
+    height: 584px;
+    border-radius: 4px;
+    background: #FCFCFC;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+ 
+}
+.close-icon {
+    display: block;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 100%;
+    margin: 24px 24px 536px 360px;
+  }
+  .icon-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 8px;
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+  }
+  */
