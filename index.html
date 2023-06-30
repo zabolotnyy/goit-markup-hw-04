@@ -19,8 +19,6 @@
   </head>
   <body>
     <!--HEADER-->
-    <div class="window">
-    </div>
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
@@ -62,12 +60,10 @@
     <!--Main-->
     <main>
       <!--Hero image-->
-      <div class="window">
-      </div>
       <section class="hero">
         <div class="container hero-container">
           <h1 class="herotext">Effective Solutions for Your Business</h1>
-          <button class="herobutton" type="button">Order Service</button>
+          <button class="herobutton" type="button" data-modal-open="">Order Service</button>
             <div class="box">
               <div class="close-icon">
               <svg class="icon" width="24" height="24">
@@ -82,7 +78,7 @@
         <div class="container">
           <h2 class="visually-hidden">.</h2>
           <ul class="features-container">
-            <li class="feature-list">
+            <li>
               <div class="features-icons">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/sprite.svg#icon-antenna"></use>
@@ -94,7 +90,7 @@
                 the perfect and creative solution.
               </p>
             </li>
-            <li class="feature-list">
+            <li>
               <div class="features-icons">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/sprite.svg#icon-clock"></use>
@@ -106,7 +102,7 @@
                 within the shortest possible time.
               </p>
             </li>
-            <li class="feature-list">
+            <li>
               <div class="features-icons">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/sprite.svg#icon-diagram"></use>
@@ -118,7 +114,7 @@
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li class="feature-list">
+            <li>
               <div class="features-icons">
                 <svg class="icon" width="64" height="64">
                   <use href="./images/sprite.svg#icon-astronaut"></use>
@@ -178,31 +174,31 @@
                 height="260"
               />
               <div class="position">
-                <h3 class="team">Mark Guerrero</h3>
-                <p class="rank">Product Designer</p>
-          <ul class="staff-networks-list">
-              <li >
+              <h3 class="team">Mark Guerrero</h3>
+              <p class="rank">Product Designer</p>
+              <ul class="staff-networks-list">
+              <li class="networks-li">
               <a class="list-net" href="" aria-label="instagram">
                 <svg class="networks" width="16" height="16">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
                 </a>
               </li>
-              <li >
+              <li class="networks-li">
                 <a class="list-net" href="" aria-label="twitter">
                 <svg class="networks" width="16" height="16">
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
               </li>
-              <li >
+              <li class="networks-li">
                 <a class="list-net" href="" aria-label="facebook">
                 <svg class="networks" width="16" height="16">
                 <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
               </li>
-              <li >
+              <li class="networks-li">
                 <a class="list-net" href="" aria-label="instagram">
                 <svg class="networks" width="16" height="16">
                   <use href="./images/sprite.svg#icon-linkedin"></use>
@@ -341,6 +337,7 @@
           </ul>
         </div>
       </section>
+      <!--Section Customers-->
       <section class="customers">
         <div class="container customers-container">
           <h2 class="main-title">Customers</h2>
@@ -404,30 +401,30 @@
           </p>
         </div>
         <div class="link-page">
-          <h4 class="media">Social media</h4>
+          <p class="media">Social media</p>
           <ul class="staff-networks">
-              <li >
+              <li class="footer-net">
               <a class="list-networks" href="" aria-label="instagram">
                 <svg class="networks" width="24" height="24">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
                 </a>
               </li>
-              <li >
+              <li class="footer-net">
                 <a class="list-networks" href="" aria-label="twitter">
                 <svg class="networks" width="24" height="24">
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
               </li>
-              <li >
+              <li class="footer-net">
                 <a class="list-networks" href="" aria-label="facebook">
                 <svg class="networks" width="24" height="24">
                 <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
               </li>
-              <li >
+              <li class="footer-net">
                 <a class="list-networks" href="" aria-label="instagram">
                 <svg class="networks" width="24" height="24">
                   <use href="./images/sprite.svg#icon-linkedin"></use>
@@ -438,6 +435,11 @@
         </div>
       </div>
     </footer>
+    <div class="window is-hidden">
+      <data-modal>
+
+      </data-modal>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
