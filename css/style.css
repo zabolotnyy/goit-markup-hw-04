@@ -137,6 +137,7 @@ button {
     url(/images/peopleoffice_1.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     padding: 188px 0 ;
 }
 .herotext {
