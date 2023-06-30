@@ -92,6 +92,8 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 .header-list:hover,
 .header-list:focus {
@@ -102,22 +104,32 @@ button {
     content: "";
     width: 48px;
     height: 4px;
+    bottom: -1px;
+    left: 0;
+    position: absolute;
     border-radius: 2px;
     background:  #404BBF;
+    
  }
  .downline-portfolio:hover ::after {
-     display: block;
-     content: "";
-     width: 66px;
-     height: 4px;
-     border-radius: 2px;
-     background: #404BBF;
+    display: block;
+    content: "";
+    width: 66px;
+    height: 4px;
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    border-radius: 2px;
+    background: #404BBF;
  }
  .downline-adress:hover ::after {
     display: block;
     content: "";
     width: 153px;
     height: 4px;
+    bottom: -1px;
+    left: 0;
+    position: absolute;
     border-radius: 2px;
     background: #404BBF;
  }
@@ -128,6 +140,8 @@ button {
     color: var(--text-color);
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 .header-adress-list:hover,
 .header-adress-list:focus {
