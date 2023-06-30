@@ -605,19 +605,18 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e7e9fc;
+    background: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-cross:hover, 
-.close-cross:focus { 
-    border: none;    
-    background-color: var(--focus-color);
-    fill:currentColor;
+.close-cross:hover,
+.close-cross:focus {
+    background-color: #404BBF;
+    border: none;
+    fill: #ffffff;
 }
-
 .icon-close-back {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
