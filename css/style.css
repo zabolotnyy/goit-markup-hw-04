@@ -101,14 +101,49 @@ header {
 .header-list:focus {
     color: var(--focus-color);
 }
-.downline:hover ::after {
+.downline-studio:hover ::after {
     content: "";
     bottom: -1px;
     left: 0;
     position: absolute;
+    width: 48px;
+    height: 4px;
     border-radius: 2px;
     height: 4px;
     background:  #404BBF;
+}
+.downline-portfolio:hover ::after {
+    content: "";
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    width: 66px;
+    height: 4px;
+    border-radius: 2px;
+    height: 4px;
+    background: #404BBF;
+}
+.downline-contacts:hover ::after {
+    content: "";
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    width: 66px;
+    height: 4px;
+    border-radius: 2px;
+    height: 4px;
+    background: #404BBF;
+}
+.downline-adress:hover ::after {
+    content: "";
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    width: 153px;
+    height: 4px;
+    border-radius: 2px;
+    height: 4px;
+    background: #404BBF;
 }
 .header-adress-list {
     font-size: 16px;
@@ -151,7 +186,7 @@ header {
     background: linear-gradient(
         to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70))
         ,
-    url(/images/peopleoffice.jpg);
+    url(../images/peopleoffice.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -601,10 +636,10 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     background-color: var(--focus-color);
 }
 
-.icon-close {
+.icon-close-back {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close:hover,  
-.icon-close:focus  {
-    fill: #ffffff;
+.close-cross:hover .icon-close-back,
+.close-cross:focus .icon-close-back {
+    color: #ffffff;
    }
