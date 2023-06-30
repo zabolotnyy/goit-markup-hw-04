@@ -549,24 +549,23 @@ header {
     max-width: 692px;
     margin-left: 120px;
 }
-MODAL WINDOW
-.window {
+/*MODAL WINDOW*/
+.backdrop {
   position:fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  height: 100vh;
+  background: rgba(46, 47, 66, 0.4);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
 .is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    
-}
-.modal-window {
+    }
+.modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -577,7 +576,7 @@ MODAL WINDOW
     background: #FCFCFC;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+   
 }
 .close-cross {
     position: absolute;
@@ -595,18 +594,16 @@ MODAL WINDOW
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-cross:hover {
+.close-cross:hover, 
+.close-cross:focus { 
+    border: none;    
     background-color: var(--focus-color);
 }
-.close-cross:focus {
-    border: none;
-}
+
 .icon-close {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close:hover  {
-     fill: #ffffff;
- }
-.icon-close:focus {
+.icon-close:hover,  
+.icon-close:focus  {
     fill: #ffffff;
-}
+   }
