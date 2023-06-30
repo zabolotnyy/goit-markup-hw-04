@@ -95,56 +95,34 @@ header {
     padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    color:#404BBF;
 }
 .header-list:hover,
 .header-list:focus {
     color: var(--focus-color);
 }
-.downline-studio:hover ::after {
+.active-studio::after {
     content: "";
+    position: absolute;
     bottom: -1px;
     left: 0;
-    position: absolute;
     width: 48px;
     height: 4px;
     border-radius: 2px;
     height: 4px;
     background:  #404BBF;
 }
-.downline-portfolio:hover ::after {
+.active-portfolio::after  {  
     content: "";
+    position: absolute;
     bottom: -1px;
     left: 0;
-    position: absolute;
     width: 66px;
     height: 4px;
     border-radius: 2px;
     height: 4px;
     background: #404BBF;
-}
-.downline-contacts:hover ::after {
-    content: "";
-    bottom: -1px;
-    left: 0;
-    position: absolute;
-    width: 66px;
-    height: 4px;
-    border-radius: 2px;
-    height: 4px;
-    background: #404BBF;
-}
-.downline-adress:hover ::after {
-    content: "";
-    bottom: -1px;
-    left: 0;
-    position: absolute;
-    width: 153px;
-    height: 4px;
-    border-radius: 2px;
-    height: 4px;
-    background: #404BBF;
-}
+    }
+
 .header-adress-list {
     font-size: 16px;
     line-height: 1.5;
@@ -612,10 +590,10 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     background: #FCFCFC;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   
-}
+   }
 .close-cross {
     position: absolute;
+    color:#E7E9FC;
     top: 24px;
     right: 24px;
     width: 24px;
@@ -633,13 +611,11 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
 .close-cross:hover, 
 .close-cross:focus { 
     border: none;    
+    fill: #FFFFFF;
     background-color: var(--focus-color);
 }
 
 .icon-close-back {
+    fill:currentColor;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close-back:hover,
-.icon-close-back:focus {
-    fill: #ffffff;
-   }
