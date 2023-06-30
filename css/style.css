@@ -36,6 +36,9 @@ button {
     font-family: inherit;
     cursor: pointer;
 }
+header {
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .header {
     border-bottom: 1px solid #E7E9FC;
 }
@@ -45,7 +48,6 @@ button {
 .adresslink {
     font-style: normal;
 }
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -86,7 +88,6 @@ button {
     list-style: none;
 }
 .header-list {
-    color: var(--background-color);
     font-size:16px;
     font-weight:500;
     line-height: 1.5;
@@ -94,45 +95,21 @@ button {
     padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    color:#404BBF;
 }
 .header-list:hover,
 .header-list:focus {
     color: var(--focus-color);
 }
-.downline-studio:hover ::after {
-    display: block;
+.downline:hover ::after {
     content: "";
-    width: 48px;
-    height: 4px;
     bottom: -1px;
     left: 0;
     position: absolute;
     border-radius: 2px;
+    height: 4px;
     background:  #404BBF;
-    
- }
- .downline-portfolio:hover ::after {
-    display: block;
-    content: "";
-    width: 66px;
-    height: 4px;
-    bottom: -1px;
-    left: 0;
-    position: absolute;
-    border-radius: 2px;
-    background: #404BBF;
- }
- .downline-adress:hover ::after {
-    display: block;
-    content: "";
-    width: 153px;
-    height: 4px;
-    bottom: -1px;
-    left: 0;
-    position: absolute;
-    border-radius: 2px;
-    background: #404BBF;
- }
+}
 .header-adress-list {
     font-size: 16px;
     line-height: 1.5;
@@ -292,6 +269,8 @@ button {
                 0px 1px 6px rgba(46, 47, 66, 0.08),
                 0px 1px 1px rgba(46, 47, 66, 0.16),
                 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 .team {
     font-weight: 500;
@@ -480,6 +459,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--web-button-color);
     width: 100%;
     padding: 12px;
@@ -571,7 +551,7 @@ button {
 }
 MODAL WINDOW
 .window {
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -584,13 +564,14 @@ MODAL WINDOW
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    
 }
 .modal-window {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
     background: #FCFCFC;
@@ -614,15 +595,18 @@ MODAL WINDOW
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-cross:hover,
-.close-cross:focus {
+.close-cross:hover {
     background-color: var(--focus-color);
+}
+.close-cross:focus {
     border: none;
 }
 .icon-close {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-close:hover,
+.icon-close:hover  {
+     fill: #ffffff;
+ }
 .icon-close:focus {
-    fill:var(--color-white);
+    fill: #ffffff;
 }
